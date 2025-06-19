@@ -8,14 +8,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
-        with:
-          version: 10
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: pnpm
-      - run: pnpm install
-      - run: pnpm format:check
-      - run: pnpm lint:check
-      - run: pnpm typecheck
-      - run: pnpm test
+          node-version-file: ".node-version"
+          cache: "pnpm"
+      - run: pnpm i --frozen-lockfile
+      - run: |
+          pnpm run lint:ci
+          pnpm run test:ci
+          pnpm run typecheck
