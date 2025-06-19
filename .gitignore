@@ -1,0 +1,10 @@
+.env
+vendor/
+dist/
+work/
+node_modules/
+jspm_packages/
+coverage/
+.DS_Store
+*.log
+*.tsbuildinfo

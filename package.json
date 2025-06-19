@@ -1,0 +1,35 @@
+{
+  "type": "module",
+  "name": "@sacloud/ts-template",
+  "version": "0.1.0",
+  "description": "TypeScript template for sacloud repositories",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sacloud/ts-template.git"
+  },
+  "keywords": [
+    "typescript",
+    "sacloud"
+  ],
+  "author": "ts-template authors",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "build": "tsc -p .",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "lint": "biome lint --write .",
+    "lint:check": "biome lint .",
+    "format": "biome check --write .",
+    "format:check": "biome check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^24.0.3",
+    "lefthook": "^1.11.14",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
