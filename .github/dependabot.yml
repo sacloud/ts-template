@@ -11,3 +11,5 @@ updates:
         dependency-type: production
       devDependencies:
         dependency-type: development
+    cooldown:
+      default-days: 7
